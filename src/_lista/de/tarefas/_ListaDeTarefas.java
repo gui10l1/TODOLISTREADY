@@ -255,11 +255,18 @@ public class _ListaDeTarefas {
                     System.out.println("====================");
                     for (int i = 0; i < tarefasDoUsuario.size(); i++) {
                         String e1 = tarefasDoUsuario.get(i).getTitulo();
-                        System.out.println("Tarefa [" + i + "]: " + e1);
+                        boolean e2 = tarefasDoUsuario.get(i).getFinalizada();
+                        String texto = e2 ? "finalizada" : "nao finalizada";
+                        System.out.println("Tarefa [" + i + "]: " + e1 + " " + texto);
                     }
 
                     System.out.print("Digite o número da tarefa que deseja remover: ");
                     procura = sc.nextInt();
+                    
+                    if (procura >= tarefasDoUsuario.size() || procura < 0) {
+                        System.out.println("Opção inválida!");
+                        break;
+                    }
 
                     tarefasDoUsuario.get(procura);
                     tarefasDoUsuario.remove(procura);
