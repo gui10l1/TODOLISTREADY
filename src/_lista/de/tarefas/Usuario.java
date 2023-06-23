@@ -8,6 +8,12 @@ public class Usuario {
     private ArrayList<Usuario> usuarios;
     private ArrayList<Tarefa> tarefas;
     
+    public Usuario(String email, String senha) {
+        this.email = email;
+        this.senha = senha;
+        this.tarefas = new ArrayList();
+    }
+    
     //Email e senha
     public void setEmail(String email){
         this.email = email;

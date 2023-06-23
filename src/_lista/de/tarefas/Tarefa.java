@@ -4,6 +4,11 @@ public class Tarefa {
     private boolean finalizada;
     private String titulo;
     
+    public Tarefa(String titulo) {
+        this.titulo = titulo;
+        this.finalizada = false;
+    }
+    
     //Titulo
     public void setTitulo(String titulo){
         this.titulo = titulo;
